@@ -29,6 +29,7 @@ The project includes validation for all fields and a professional schema using M
 Make sure you have **Node.js** and **npm** installed.  
 MongoDB Atlas account with a cluster set up.
 
+---
 ### Installation
 1. Clone the repo  
 ```bash
@@ -38,3 +39,48 @@ git clone https://github.com/SAUGAT2060/MiniSecond_JS.git
 ```bash
 cd MiniSecond_JS
 ```
+3.Install dependencies
+```bash
+npm install
+
+```
+4.Add your MongoDB connection string in .env
+```bash
+echo "connectionString=<your-mongo-connection-string>" > .env
+```
+---
+Folder Structure
+```bash 
+
+MiniSecond/
+├── models/
+│   └── Product.js            # Mongoose schema for Food products
+├── routes/
+│   └── createEmployee.js     # POST route to create new product
+├── .env                      # Contains MongoDB connection string
+├── app.js                    # Express server setup and MongoDB connection
+├── package.json              # Project dependencies
+└── README.md                 # Project description
+```
+---
+### Usage
+### Start the server
+```bash 
+node app.js
+```
+### Or with Nodemon
+``` bash
+npx nodemon app.js
+```
+### Test the POST request using Postman
+Send a POST request to:
+``` bash
+http://localhost:3000/api/employees
+```
+---
+### License
+This project is unlicensed for academic use.
+
+### Contact
+## Saugat Rana & Kushal Gurung
+Project Link: https://github.com/SAUGAT2060/MiniSecond_JS

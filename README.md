@@ -33,7 +33,8 @@ MongoDB Atlas account with a cluster set up.
 1. Clone the repo  
 ```bash
 git clone https://github.com/SAUGAT2060/MiniSecond_JS.git
-
+```
 2.Navigate into the project folder 
 ```bash
 cd MiniSecond_JS
+```

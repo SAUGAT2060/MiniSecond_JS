@@ -10,13 +10,31 @@ const app = express()
 const port = 3000
 
 //Loading the environmental variables form the env files 
+dotenv.config()
 
 
-app.get('/',(req,res)=>{
-  res.send('Its working!')
-})
+const mongoURL = process.env.connectionString;
 
-app.listen(port,(req,res)=>{
+async function main (){
+  try{
+    await mongoose.connect(mongoURL);
+    console.log("You are successfully connected to MongoDB!");
+
+  }
+  catch(err){
+    console.log("Connection Failed!",err);
+    process.exit(1);
+
+  }
+}
+
+main();
+
+
+
+app.listen(port,()=>{
   console.log(`Url:  http://localhost:${port}`);
+ 
+  
   
 })

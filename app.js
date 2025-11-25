@@ -3,6 +3,7 @@ import express from 'express'
 import dotenv from 'dotenv'
 import mongoose from 'mongoose'
 
+import createProductRoute from './routes/createProduct.js'
 // Initializing the instance for app 
 const app = express()
 
@@ -29,7 +30,8 @@ async function main (){
 }
 
 main();
-
+app.use(express.json());
+app.use('/api/product',createProductRoute);
 
 
 app.listen(port,()=>{
